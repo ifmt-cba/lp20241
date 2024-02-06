@@ -3,18 +3,30 @@ Exercícios sobre os comandos básicos em Python
 '''
 
 #1. Faça um programa que imprima o seu nome.
+print('João Paulo')
 
 #2. Faça um programa que imprima o produto dos valores 30 e 27.
+print(30*27)
 
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
+print((5+8+12)/3)
 
 #4. Faça um programa que leia e imprima um número inteiro.
+numero = int(input('Digite um número inteiro: '))
+print(numero)
 
 #5. Faça um programa que leia dois números reais e os imprima.
+numero1 = float(input('Digite um número real: '))
+numero2 = float(input('Digite um outro número real: '))
+print(numero1)
+print(numero2)
 
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
-  
+numero = int(input('Digite um número inteiro: '))
+print(f'Sucessor: {numero+1}')
+print(f'Antecessor: {numero-1}')
+
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
 
