@@ -3,103 +3,119 @@ Exercícios sobre os comandos básicos em Python
 '''
 
 #1. Faça um programa que imprima o seu nome.
-print('João Paulo')
+def q01():
+    print('João Paulo')
 
 #2. Faça um programa que imprima o produto dos valores 30 e 27.
-print(30*27)
+def q02():
+    print(30*27)
 
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
-print((5+8+12)/3)
+def q03():
+    print((5+8+12)/3)
 
 #4. Faça um programa que leia e imprima um número inteiro.
-numero = int(input('Digite um número inteiro: '))
-print(numero)
+def q04():
+    numero = int(input('Digite um número inteiro: '))
+    print(numero)
 
 #5. Faça um programa que leia dois números reais e os imprima.
-numero1 = float(input('Digite um número real: '))
-numero2 = float(input('Digite um outro número real: '))
-print(numero1)
-print(numero2)
+def q05():
+    numero1 = float(input('Digite um número real: '))
+    numero2 = float(input('Digite um outro número real: '))
+    print(numero1)
+    print(numero2)
 
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
-numero = int(input('Digite um número inteiro: '))
-print(f'Sucessor: {numero+1}')
-print(f'Antecessor: {numero-1}')
+def q06():
+    numero = int(input('Digite um número inteiro: '))
+    print(f'Sucessor: {numero+1}')
+    print(f'Antecessor: {numero-1}')
 
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
-nome = input('Nome: ')
-endereco = input('Endereço: ')
-telefone = input('Telefone: ')
-print(f'\n{nome}\n{telefone}\n{endereco}')
+def q07():
+    nome = input('Nome: ')
+    endereco = input('Endereço: ')
+    telefone = input('Telefone: ')
+    print(f'\n{nome}\n{telefone}\n{endereco}')
 
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
-num1 = int(input('Núm1: '))
-num2 = int(input('Núm2: '))
-subtracao = num1 - num2
-print(f'{subtracao}')
+def q08():
+    num1 = int(input('Núm1: '))
+    num2 = int(input('Núm2: '))
+    subtracao = num1 - num2
+    print(f'{subtracao}')
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
-numero = float(input('Número real: '))
-print(f'{numero/4}')
+def q09():
+    numero = float(input('Número real: '))
+    print(f'{numero/4}')
 
 #10. Faça um programa que leia três números reais e calcule a
 #    média aritmética destes números. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
-num1 = float(input('Núm1: '))
-num2 = float(input('Núm2: '))
-num3 = float(input('Núm3: '))
-print(f'{(num1+num2+num3)/3}')
+def q10():
+    num1 = float(input('Núm1: '))
+    num2 = float(input('Núm2: '))
+    num3 = float(input('Núm3: '))
+    print(f'{(num1+num2+num3)/3}')
 
 #11. Faça um programa que leia dois números reais e calcule as
 #    quatro operações básicas entre estes dois números, adição,
 #    subtração,multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
-num1 = float(input('Núm1: '))
-num2 = float(input('Núm2: '))
-print(f'{num1} + {num2} = {num1+num2}')
-print(f'{num1} - {num2} = {num1-num2}')
-print(f'{num1} * {num2} = {num1*num2}')
-print(f'{num1} / {num2} = {round((num1/num2),1)}')
+def q11():
+    num1 = float(input('Núm1: '))
+    num2 = float(input('Núm2: '))
+    print(f'{num1} + {num2} = {num1+num2}')
+    print(f'{num1} - {num2} = {num1-num2}')
+    print(f'{num1} * {num2} = {num1*num2}')
+    print(f'{num1} / {num2} = {round((num1/num2),1)}')
 
 #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
-numero = float(input('Número: '))
-print(f'{numero**2}')
+def q12():
+    numero = float(input('Número: '))
+    print(f'{numero**2}')
 
 #13. Faça um programa que leia o saldo de uma conta poupança e
 #    imprima o novo saldo, considerando um reajuste de 2%.
-saldo = float(input('Saldo da conta: R$ '))
-print(f'{saldo*1.02}')
+def q13():
+    saldo = float(input('Saldo da conta: R$ '))
+    print(f'{saldo*1.02}')
 
 #14. Faça um programa que leia a base e a altura de um retângulo
 #    e imprima o perímetro (base + altura) e a área (base * altura / 2).
-base = float(input('Base do triângulo: '))
-altura = float(input('Altura do triângulo: '))
-print(f'Perímetro: {base + altura}')
-print(f'Área: {base * altura / 2}')
+def q14():
+    base = float(input('Base do triângulo: '))
+    altura = float(input('Altura do triângulo: '))
+    print(f'Perímetro: {base + altura}')
+    print(f'Área: {base * altura / 2}')
 
 #15. Faça um programa que leia o valor de um produto, o percentual
 #    do desconto desejado e imprima o valor do desconto e o valor
 #    do produto subtraindo o desconto.
-preco = float(input('Preço do produto: R$ '))
-desconto = float(input('Desconto (%): '))
-valor_desconto = preco * desconto / 100
-preco_final = preco - valor_desconto
-print(f'Valor do desconto: R$ {round(valor_desconto,2)}')
-print(f'Preço final do produto: R$ {round(preco_final,2)}')
+def q15():
+    preco = float(input('Preço do produto: R$ '))
+    desconto = float(input('Desconto (%): '))
+    valor_desconto = preco * desconto / 100
+    preco_final = preco - valor_desconto
+    print(f'Valor do desconto: R$ {round(valor_desconto,2)}')
+    print(f'Preço final do produto: R$ {round(preco_final,2)}')
 
 #16. Faça um programa que calcule o reajuste do salário de um
 #    funcionário. Para isso, o programa deverá ler o salário atual
 #    do funcionário e ler o percentual de reajuste. Ao final imprimir
 #    o valor do novo salário.
-salario = float(input('Salário: R$ '))
-reajuste = float(input('Reajuste (%): '))
-novo_salario = salario * (1 + (reajuste / 100))
-print(f'Novo salário: R$ {novo_salario:.2f}') #trunca até a segunda casa
+def q16():
+    salario = float(input('Salário: R$ '))
+    reajuste = float(input('Reajuste (%): '))
+    novo_salario = salario * (1 + (reajuste / 100))
+    print(f'Novo salário: R$ {novo_salario:.2f}') #trunca até a segunda casa
 
 #17. Faça um programa que calcule a conversão entre graus centígrados
 #    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
@@ -130,3 +146,7 @@ print(f'Novo salário: R$ {novo_salario:.2f}') #trunca até a segunda casa
 #20. Faça um programa que efetue a apresentação do valor da conversão
 #    em real (R$) de um valor lido em dólar (US$). Para isso, será
 #    necessário também ler o valor da cotação do dólar.
+
+
+# Escolha a questão a ser executada
+q01()
