@@ -29,39 +29,77 @@ print(f'Antecessor: {numero-1}')
 
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
+nome = input('Nome: ')
+endereco = input('Endereço: ')
+telefone = input('Telefone: ')
+print(f'\n{nome}\n{telefone}\n{endereco}')
 
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
+num1 = int(input('Núm1: '))
+num2 = int(input('Núm2: '))
+subtracao = num1 - num2
+print(f'{subtracao}')
 
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
+numero = float(input('Número real: '))
+print(f'{numero/4}')
 
 #10. Faça um programa que leia três números reais e calcule a
 #    média aritmética destes números. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
+num1 = float(input('Núm1: '))
+num2 = float(input('Núm2: '))
+num3 = float(input('Núm3: '))
+print(f'{(num1+num2+num3)/3}')
 
 #11. Faça um programa que leia dois números reais e calcule as
 #    quatro operações básicas entre estes dois números, adição,
 #    subtração,multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
+num1 = float(input('Núm1: '))
+num2 = float(input('Núm2: '))
+print(f'{num1} + {num2} = {num1+num2}')
+print(f'{num1} - {num2} = {num1-num2}')
+print(f'{num1} * {num2} = {num1*num2}')
+print(f'{num1} / {num2} = {round((num1/num2),1)}')
 
 #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
+numero = float(input('Número: '))
+print(f'{numero**2}')
 
 #13. Faça um programa que leia o saldo de uma conta poupança e
 #    imprima o novo saldo, considerando um reajuste de 2%.
+saldo = float(input('Saldo da conta: R$ '))
+print(f'{saldo*1.02}')
 
 #14. Faça um programa que leia a base e a altura de um retângulo
-#    e imprima o perímetro (base + altura) e a área (base * altura).
+#    e imprima o perímetro (base + altura) e a área (base * altura / 2).
+base = float(input('Base do triângulo: '))
+altura = float(input('Altura do triângulo: '))
+print(f'Perímetro: {base + altura}')
+print(f'Área: {base * altura / 2}')
 
 #15. Faça um programa que leia o valor de um produto, o percentual
 #    do desconto desejado e imprima o valor do desconto e o valor
 #    do produto subtraindo o desconto.
+preco = float(input('Preço do produto: R$ '))
+desconto = float(input('Desconto (%): '))
+valor_desconto = preco * desconto / 100
+preco_final = preco - valor_desconto
+print(f'Valor do desconto: R$ {round(valor_desconto,2)}')
+print(f'Preço final do produto: R$ {round(preco_final,2)}')
 
 #16. Faça um programa que calcule o reajuste do salário de um
 #    funcionário. Para isso, o programa deverá ler o salário atual
 #    do funcionário e ler o percentual de reajuste. Ao final imprimir
 #    o valor do novo salário.
+salario = float(input('Salário: R$ '))
+reajuste = float(input('Reajuste (%): '))
+novo_salario = salario * (1 + (reajuste / 100))
+print(f'Novo salário: R$ {novo_salario:.2f}') #trunca até a segunda casa
 
 #17. Faça um programa que calcule a conversão entre graus centígrados
 #    e Fahrenheit. Para isso, leia o valor em centígrados e calcule
