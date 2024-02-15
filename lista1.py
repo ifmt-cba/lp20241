@@ -122,6 +122,10 @@ def q16():
 #    com base na fórmula a seguir. Após calcular o programa deve
 #    imprimir o resultado da conversão.
 #    F = (9 x C + 160) / 5
+def q17():
+    c = float(input('Graus Centígrados: '))
+    f = (9 * c + 160) / 5
+    print(f'Equivalente em Fahrenheit: {f}')
 
 #18. Faça um programa que calcule a quantidade de litros de combustível
 #    consumidos em uma viagem, sabendo-se que o carro tem autonomia de
@@ -135,6 +139,13 @@ def q16():
 #    • L = Litros de combustível consumidos
 #    Ao final, o programa deverá imprimir a distância percorrida e a
 #    quantidade de litros consumidos na viagem.
+def q18():
+    tempo = int(input('Tempo da viagem(minutos): '))
+    velocidade = int(input('Velocidade média (km/h): '))
+    distancia = tempo/60 * velocidade
+    litros = distancia/12
+    print(f'Distância percorrida: {distancia} km')
+    print(f'Litros gastos: {litros}')
 
 #19. Faça um programa que calcule o valor de uma prestação em atraso.
 #    Para isso, o programa deve ler o valor da prestação vencida, a
@@ -142,11 +153,22 @@ def q16():
 #    programa deve imprimir o valor da prestação atrasada, o período
 #    de atraso, os juros que serão cobrados pelo período de atraso, o
 #    valor da prestação acrescido dos juros. Considere juros simples.
+def q19():
+    valor_prestacao = float(input('Valor da prestação: R$ '))
+    taxa_juros = float(input('Taxa de juros diária (%): '))
+    dias_atraso = int(input('Qtde de dias atrasado: '))
+    multa = valor_prestacao * taxa_juros/100 * dias_atraso
+    valor_final = valor_prestacao + multa
+    print(f'Valor da multa: R$ {round(multa,2)}')
+    print(f'Valor a pagar: R$ {round(valor_final,2)}')
 
 #20. Faça um programa que efetue a apresentação do valor da conversão
 #    em real (R$) de um valor lido em dólar (US$). Para isso, será
 #    necessário também ler o valor da cotação do dólar.
-
+def q20():
+    dolares = float(input('Qtde de dólares: US$ '))
+    cotacao = float(input('Cotação do dólar: R$ '))
+    print(f'Valor em reais: R$ {dolares * cotacao}')
 
 # Escolha a questão a ser executada
 q01()
