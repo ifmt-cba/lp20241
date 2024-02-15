@@ -1,14 +1,28 @@
 '''
 Exercícios sobre os comandos de condição em python
 '''
-       
+
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
+def q01():
+    num1 = int(input('Primeiro número: '))
+    num2 = int(input('Segundo número: '))
+    soma = num1+num2
+    if soma > 10:
+        print(f'Soma: {soma}')
 
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
+def q02():
+    num1 = int(input('Primeiro número: '))
+    num2 = int(input('Segundo número: '))
+    soma = num1+num2
+    if soma > 20:
+        print(f'Resultado: {soma+8}')
+    else:
+        print(f'Resultado: {soma-5}')
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
@@ -145,3 +159,8 @@ Exercícios sobre os comandos de condição em python
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
 
+opcao = int(input('Questão a ser executada: '))
+match opcao:
+    case 1: q01()
+    case 2: q02()
+    case _: print('Opção Inválida!')
