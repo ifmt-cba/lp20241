@@ -1,6 +1,9 @@
 '''
 Exercícios sobre os comandos de condição em python
 '''
+from datetime import date, datetime
+
+TODAY = datetime.now()
 
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
@@ -45,9 +48,28 @@ def q02():
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
 #   verificar se o ano de nascimento informado é válido.
+def q09():
+    ano_nascimento = int(input('Ano de nascimento: '))
+    print(f'Idade: {TODAY.year - ano_nascimento}')
 
 #10. Faça um programa que leia três números inteiros e imprima os três em ordem
 #crescente.
+def q10():
+    a = int(input('1 Número: '))
+    b = int(input('2 Número: '))
+    c = int(input('3 Número: '))
+    if a<b and b<c:
+        print(f'{a}, {b}, {c}')
+    if a<c and c<b:
+        print(f'{a}, {c}, {b}')
+    if b<a and a<c:
+        print(f'{b}, {a}, {c}')
+    if b<c and c<a:
+        print(f'{b}, {c}, {a}')
+    if c<a and a<b:
+        print(f'{c}, {a}, {b}')
+    if c<b and b<a:
+        print(f'{c}, {b}, {a}')
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
 
@@ -137,16 +159,41 @@ def q02():
 #a partir da escolha do usuário que deverá informar o prato, a sobremesa, e
 #bebida conforme a tabela a seguir.
 #Prato  Sobremesa   Bebida
-#Vegetariano 180cal Abacaxi 75cal   Chá 20cal
-#Peixe 230cal   Sorvete diet 110cal Suco de laranja 70cal
-#Frango 250cal  Mousse diet 170cal  Suco de melão 100cal
-#Carne 350cal   Mousse chocolate 200cal Refrigerante diet 65cal
+#Vegetariano    180cal Abacaxi          75cal  Chá               20cal
+#Peixe          230cal Sorvete diet     110cal Suco de laranja   70cal
+#Frango         250cal Mousse diet      170cal Suco de melão     100cal
+#Carne          350cal Mousse chocolate 200cal Refrigerante diet 65cal
+def q23():
+    prato = input('Prato: ').upper().strip()
+    sobremesa = input('Sobremesa: ').upper().strip()
+    bebida = input('Bebida: ').upper().strip()
+
+    total = 0
+    total += 180 if prato == 'VEGETARIANO' else 0
+    total += 230 if prato == 'PEIXE' else 0
+    total += 250 if prato == 'FRANGO' else 0
+    total += 350 if prato == 'CARNE' else 0
+    total += 75 if sobremesa == 'ABACAXI' else 0
+    total += 110 if sobremesa == 'SOVERTE DIET' else 0
+    total += 170 if sobremesa == 'MOUSSE DIET' else 0
+    total += 200 if sobremesa == 'MOUSSE CHOCOLATE' else 0
+    total += 20 if bebida == 'CHA' else 0
+    total += 70 if bebida == 'SUCO DE LARANJA' else 0
+    total += 100 if bebida == 'SUCO DE MELAO' else 0
+    total += 65 if bebida == 'REFRIGERANTE' else 0            
+
+    print(f'Total de calorias: {total}')
 
 #24. A polícia rodoviária resolveu fazer cumprir a lei e vistoriar veículos para
 #cobrar dos motoristas o DUT. Sabendo-se que o mês em que o emplacamento do
 #carro deve ser renovado é determinado pelo último número da placa do mesmo,
 #faça um programa que, a partir da leitura da placa do carro, informe o mês
 #em que o emplacamento deve ser renovado.
+def q24():
+    placa = input('Placa do veículo: ').upper().strip()
+    mes = placa[len(placa)-1]
+    if mes == '1':
+        printf('JANEIRO')
 
 #25. A prefeitura contratou uma firma especializada para manter os níveis de
 #poluição considerados ideais para um país do 1º mundo. As indústrias,
