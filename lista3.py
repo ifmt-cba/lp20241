@@ -2,9 +2,25 @@
 Lista de Exercícios referentes a estruturas de iteração (repetição)
 '''
 
+def exemploPara():
+    for x in range(10):
+        print(x) # imprime de 0 a 9
+
+def exemploEnquanto():
+    x = 0
+    while x < 10:
+        print(x)
+        x += 1 # é a mesma coisa que x = x + 1
+
 #1.Faça um programa que imprima todos os números de 1 até 100.
+def q01():
+    for x in range(1,101):
+        print(x, end = " ")
 
 #2. Faça um programa que imprima todos os números pares de 100 até 1.
+def q02():
+    for x in range(100,0,-2):
+        print(x, end = " ")
 
 #3. Faça um programa que imprima os múltiplos de 5, no intervalo de 1 até 500.
 
