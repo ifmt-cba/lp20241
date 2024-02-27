@@ -275,3 +275,11 @@ def q02():
 #analisadas.
 #Obs.: Para encerrar a entrada de dados, digite um número menor que zero para a
 #idade.
+
+while True:
+    opcao = int(input('Questão a ser executada: '))
+    match opcao:
+        case 0: break
+        case 1: q01()
+        case 2: q02()
+        case _: print('Opção Inválida!')
