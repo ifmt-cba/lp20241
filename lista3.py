@@ -320,4 +320,7 @@ while True:
         case 0: break
         case 1: q01()
         case 2: q02()
+        case 5: q05()
+        case 6: q06()
+        case 9: q09()
         case _: print('Opção Inválida!')
