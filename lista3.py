@@ -31,12 +31,31 @@ def q02():
 #5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 #sucessivas, crie um programa que calcule o produto de dois números inteiros
 #lidos. Suponha que os números lidos sejam positivos.
+def q05():
+    soma = 0
+    num1 = int(input('Número 1: '))
+    num2 = int(input('Número 2: '))
+    #5*4 = 20 (4+4+4+4+4)
+    for x in range(num1):
+        soma += num2
+    print(f'{num1} * {num2} = {soma}')
 
 #6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 #Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
 #a partir da soma dos anteriores. Exemplo:
 #• 1 + 1 = 2, terceiro termo;
 #• 1 + 2 = 3, quarto termo, etc.
+# 1 1 2 3 5 8 13 21
+def q06():
+    anterior = 0
+    atual = 1
+    print(atual, end = " ")
+    for x in range(19):
+        proximo = anterior + atual
+        print(proximo, end = " ")
+        anterior = atual
+        atual = proximo
+
 
 #7. Crie um programa que permita entrar com o nome, a nota da
 #prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
@@ -60,6 +79,25 @@ def q02():
 #• A quantidade de pessoas que responderam regular;
 #• A percentagem de pessoas que responderam bom entre todos os expectadores
 #analisados.
+def q09():
+    qtdePessoasExcelente = 0
+    somaIdadeExcelente = 0
+    qtdePessoasRegular = 0
+    qtdePessoasBom = 0
+    qtdeTotalPessoas = int(input('Número de Pessoas: '))
+    for x in range(qtdeTotalPessoas):
+        idade = int(input('Idade: '))
+        opiniao = int(input('Opinião ([3]-Excelente - [2]-Bom - [1]-Regular): '))
+        match(opiniao):
+            case 1: qtdePessoasRegular += 1
+            case 2: qtdePessoasBom += 1
+            case 3:
+                qtdePessoasExcelente +=1
+                somaIdadeExcelente += idade
+            case _: print('Opção Inválida!')
+    print(f'Média idade excelente: {somaIdadeExcelente/qtdePessoasExcelente}')
+    print(f'Qtde de pessoas regular: {qtdePessoasRegular}')
+    print(f'% de pessoas que responderam bom: {qtdePessoasBom/qtdeTotalPessoas*100}%')
 
 #10. Em um campeonato Europeu de Volleyball, se inscreveram 30 países. Sabendo-se
 #que na lista oficial de cada país consta, além de outros dados, peso e idade de 12
