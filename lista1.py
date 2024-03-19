@@ -16,7 +16,11 @@ def q03():
 
 #4. Faça um programa que leia e imprima um número inteiro.
 def q04():
-    numero = int(input('Digite um número inteiro: '))
+    numero = 0
+    try:
+        numero = int(input('Digite um número inteiro: '))
+    except ValueError:
+        print('Valor Inválido, apenas números inteiros são válidos!')
     print(numero)
 
 #5. Faça um programa que leia dois números reais e os imprima.
@@ -68,12 +72,35 @@ def q10():
 #    subtração,multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
 def q11():
-    num1 = float(input('Núm1: '))
-    num2 = float(input('Núm2: '))
+    erro = True
+    num1 = 0
+    num2 = 0
+    while erro == True:
+        try:
+            num1 = float(input('Núm1: '))
+            erro = False
+        except ValueError:
+            print('Valor inválido. Informe novamente.')
+            erro = True
+    erro = True
+    while erro == True:
+        try:
+            num2 = float(input('Núm2: '))
+            erro = False
+        except ValueError:
+            print('Valor inválido. Informe novamente.')
+            erro = True
     print(f'{num1} + {num2} = {num1+num2}')
     print(f'{num1} - {num2} = {num1-num2}')
     print(f'{num1} * {num2} = {num1*num2}')
-    print(f'{num1} / {num2} = {round((num1/num2),1)}')
+    try:
+        print(f'{num1} / {num2} = {round((num1/num2),1)}')
+    except ZeroDivisionError:
+        print('Não é possível realizar a divisão por zero!')
+    except:
+        print('Ocorreu um erro desconhecido. Contactar do adm do sistema')
+    finally:
+        print('O que está aqui vai executar de qualquer jeito!')
 
 #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
