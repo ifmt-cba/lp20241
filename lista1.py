@@ -2,6 +2,8 @@
 Exercícios sobre os comandos básicos em Python
 '''
 
+from mylib import inputInt
+
 #1. Faça um programa que imprima o seu nome.
 def q01():
     print('João Paulo')
@@ -33,7 +35,7 @@ def q05():
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
 def q06():
-    numero = int(input('Digite um número inteiro: '))
+    numero = inputInt('Digite um número inteiro: ')
     print(f'Sucessor: {numero+1}')
     print(f'Antecessor: {numero-1}')
 
