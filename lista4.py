@@ -29,12 +29,16 @@ def q02():
         print(f'{i}: {lista[i]}')
         i+=1
 
-q02()
-
-
-
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
+def q03():
+    lista = []
+    for x in range(15):
+        lista.append(random.randrange(100))
+    i = 0
+    for n in lista:
+        print(f'{i+1}: {n} é {"PAR" if n%2==0 else "IMPAR"}')
+        i+=1
 
 #4. Faça um programa que armazene 8 números em uma lista e imprima todos os
 #números. Ao final, imprima o total de números múltiplos de seis.
@@ -44,7 +48,20 @@ q02()
 #Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem
 #contendo as notas, a média e a situação de cada aluno em formato tabulado.
 #Utilize quantas listas forem necessárias para armazenar os dados.
-
+def q05():
+    alunos = []
+    for x in range(3):
+        aluno = dict()
+        aluno['nome'] = input('Nome: ')
+        aluno['n1'] = float(input('Nota 1: '))
+        aluno['n2'] = float(input('Nota 2: '))
+        aluno['media'] = (aluno['n1'] + aluno['n2']) / 2
+        aluno['situacao'] = 'APROVADO' if aluno['media']>=6 else 'REPROVADO'
+        alunos.append(aluno)
+    print('NOME\tN1\tN2\tMEDIA\tSITUACAO')
+    for a in alunos:
+        print(f'{a["nome"]}\t{a["n1"]}\t{a["n2"]}\t{a["media"]}\t{a["situacao"]}')
+q05()
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
