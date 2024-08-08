@@ -61,12 +61,24 @@ def q05():
     print('NOME\tN1\tN2\tMEDIA\tSITUACAO')
     for a in alunos:
         print(f'{a["nome"]}\t{a["n1"]}\t{a["n2"]}\t{a["media"]}\t{a["situacao"]}')
-q05()
+
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
 #necessárias.
-
+def q06():
+    pessoas = []
+    for _ in range(3):
+        pessoa = dict()
+        pessoa['nome'] = input('Nome: ')
+        pessoa['salario'] = float(input('Salário: '))
+        pessoa['salario_novo'] = pessoa['salario'] * 1.08
+        pessoas.append(pessoa)
+    
+    print('NOME\tSAL\t\tSAL_NOVO')
+    for p in pessoas:
+        print(f'{p["nome"]}\tR$ {p["salario"]}\tR$ {p["salario_novo"]}')
+q06()
 #7. Crie um programa que leia o preço de compra e o preço de venda de 100 mercadorias
 #(utilize listas). Ao final, o programa deverá imprimir quantas mercadorias
 #proporcionam:
