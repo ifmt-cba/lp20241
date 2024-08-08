@@ -78,14 +78,38 @@ def q06():
     print('NOME\tSAL\t\tSAL_NOVO')
     for p in pessoas:
         print(f'{p["nome"]}\tR$ {p["salario"]}\tR$ {p["salario_novo"]}')
-q06()
+
 #7. Crie um programa que leia o preço de compra e o preço de venda de 100 mercadorias
 #(utilize listas). Ao final, o programa deverá imprimir quantas mercadorias
 #proporcionam:
 #• lucro < 10%
 #• 10% <= lucro <= 20%
 #• lucro > 20%
+def q07():
+    produtos = []
+    for _ in range(5):
+        produto = dict()
+        produto['nome'] = chr(random.randrange(65,91))
+        produto['compra'] = random.randrange(10,101)
+        produto['venda'] = random.randrange(produto['compra'],101)
+        produto['lucro'] = round((produto['venda']-produto['compra'])/produto['venda']*100,1)
+        produtos.append(produto)
 
+    lucro_10 = 0
+    lucro_10_20 = 0
+    lucro_20 = 0
+
+    print(f'PRODUTO\tCOMPRA\tVENDA\tLUCRO')
+    for p in produtos:
+        print(f"{p['nome']}\tR$ {p['compra']}\tR$ {p['venda']}\t{p['lucro']}%\t")
+        lucro_10 += 1 if p['lucro'] < 10 else 0
+        lucro_10_20 += 1 if (p['lucro'] >=10 and p['lucro'] <=20) else 0
+        lucro_20 += 1 if p['lucro'] > 20 else 0
+    
+    print(f'\nQtde de produtos com lucro < 10%:\t\t{lucro_10}')
+    print(f'Qtde de produtos com lucro entre 10% e 20%:\t{lucro_10_20}')
+    print(f'Qtde de produtos com lucro > 20%:\t\t{lucro_20}')
+q07()
 #8. Construa um programa que armazene o código, a quantidade, o valor de compra
 #e o valor de venda de 30 produtos. A listagem pode ser de todos os produtos ou
 #somente de um ao se digitar o código. Utilize dicionário como estrutura de dados.
